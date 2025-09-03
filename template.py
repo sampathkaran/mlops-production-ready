@@ -1,5 +1,5 @@
 import os 
-
+from pathlib import Path
 project_name = "us_visa"
 
 list_of_files = [
@@ -30,13 +30,16 @@ list_of_files = [
     "demo.py",
     "setup.py",
     "config/model.yaml",
-    "config/schema.yaml"
+    "config/schema.yaml",
 ]
 
-for files in list_of_files:
-    # create a directory
-    if "/" in files:
-        os.makedirs(os.path.dirname(files), exist_ok=True)
-    # create file
-    open(files, "w").close()
- 
+for file in list_of_files:
+    path = Path(file)
+    dir, filename = os.path.split(path)
+    if dir != "":
+        os.makedirs(dir, exist_ok=True)
+    if (not os.path.exists(file)) or (os.path.getsize(file)==0):
+        with open(path, "w") as f:
+            pass
+    else:
+      print(f"file is already present at {file}")

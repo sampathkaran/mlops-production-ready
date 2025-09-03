@@ -22,4 +22,4 @@ fastapi
 uvicorn
 jinja2
 python-multipart
--e .
+-e . # changes to code in local pacakge is live and no need to reinstall

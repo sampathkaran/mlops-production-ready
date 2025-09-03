@@ -71,7 +71,7 @@ The code is structured in a modular way and follows standard ML best practices:
 Create environment
 
 ```bash
-conda create -n visa-prediction --python=3.8 -y
+conda create -n visa-prediction python=3.8 -y
 ```
 
 ```bash
@@ -79,5 +79,5 @@ conda activate visa-prediction
 ```
 
 ```bash
-pip install - r requirements.txt
+pip install -r requirements.txt
 ```
