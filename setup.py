@@ -5,5 +5,5 @@ setup(
     version = "0.0.0.0",
     author = "sam",
     author_email= "john_doe@gmail.com",
-    packages=find_packages() # it will look for init.pu file and consider the folder as a package
+    packages=find_packages() # it will look for init.py file and consider the folder as a package
 )
