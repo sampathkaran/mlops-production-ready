@@ -81,3 +81,10 @@ conda activate visa-prediction
 ```bash
 pip install -r requirements.txt
 ```
+
+## Modules Usage
+
+1. Logger Module
+- used to save the print statement outputs to a file
+- capture errors and logs into a file
+
